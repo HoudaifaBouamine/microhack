@@ -17,7 +17,7 @@ public class OptiFieldDbContextFactory : IDesignTimeDbContextFactory<OptiFieldDb
         var configuration = BuildConfiguration();
 
         var builder = new DbContextOptionsBuilder<OptiFieldDbContext>()
-            .UseSqlServer(configuration.GetConnectionString("Default"));
+            .UseSqlite(configuration.GetConnectionString("Default"));
 
         return new OptiFieldDbContext(builder.Options);
     }
