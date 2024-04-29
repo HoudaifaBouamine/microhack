@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OptiField.Domain;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
@@ -46,6 +47,8 @@ public class OptiFieldDbContext :
     public DbSet<IdentitySecurityLog> SecurityLogs { get; set; }
     public DbSet<IdentityLinkUser> LinkUsers { get; set; }
     public DbSet<IdentityUserDelegation> UserDelegations { get; set; }
+    public DbSet<Project> Projects { get; set; }
+
 
     // Tenant Management
     public DbSet<Tenant> Tenants { get; set; }
